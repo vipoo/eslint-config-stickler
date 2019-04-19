@@ -4,7 +4,8 @@ module.exports = {
     Promise: false,
     process: false,
     __dirname: false,
-    setTimeout: false
+    setTimeout: false,
+    Symbol: false
   },
   parserOptions: {
     sourceType: 'module',

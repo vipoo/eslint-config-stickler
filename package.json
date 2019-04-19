@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-stickler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A custom set of eslint rules i like",
   "main": "index.js",
   "author": "Dean Netherton",
