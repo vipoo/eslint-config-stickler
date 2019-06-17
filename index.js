@@ -64,7 +64,8 @@ module.exports = {
       'anonymous': 'never',
       'named': 'never',
       'asyncArrow': 'always'
-    }]
+    }],
+    'quote-props': ["error", "as-needed"]
   },
   env: {
     node: true
