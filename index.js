@@ -4,8 +4,11 @@ module.exports = {
     Promise: false,
     process: false,
     __dirname: false,
+    __filename: false,
     setTimeout: false,
-    Symbol: false
+    Symbol: false,
+    Set: false,
+    Map: false
   },
   parserOptions: {
     sourceType: 'module',
