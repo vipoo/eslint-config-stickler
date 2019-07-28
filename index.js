@@ -25,15 +25,16 @@ module.exports = {
       'resolvePaths': ['node_modules', './src', './tests'],
       'tryExtensions': ['.js']
     }],
+    'no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
     'import/no-commonjs': ['error'],
-    strict: ['error', 'global'],
-    quotes: [2, 'single', 'avoid-escape'],
-    curly: [2, 'multi'],
+    'strict': ['error', 'global'],
+    'quotes': [2, 'single', 'avoid-escape'],
+    'curly': [2, 'multi'],
     'no-mixed-requires': [1, true],
     'no-underscore-dangle': 0,
     'no-multi-spaces': 0,
     'no-alert': 0,
-    semi: [2, 'never'],
+    'semi': [2, 'never'],
     'eqeqeq': ['error', 'always'],
     'comma-dangle': 0,
     'array-bracket-spacing': 0,
@@ -55,10 +56,10 @@ module.exports = {
     'no-multiple-empty-lines': ['error', { 'max': 1, 'maxEOF': 1 }],
     'key-spacing': ['error', { 'beforeColon': false }],
     'space-before-blocks': 'error',
-    indent: ['error', 2],
+    'indent': ['error', 2],
     'filenames/match-regex': [2, '^[a-z0-9_\\.]+$', false],
     'no-only-tests/no-only-tests': 2,
-    complexity: ['error', 3],
+    'complexity': ['error', 4],
     'space-infix-ops': ['error', {'int32Hint': true}],
     'space-unary-ops': 'error',
     'block-spacing': ['error', 'always'],
@@ -68,7 +69,7 @@ module.exports = {
       'named': 'never',
       'asyncArrow': 'always'
     }],
-    'quote-props': ["error", "as-needed"]
+    'quote-props': ['error', 'as-needed']
   },
   env: {
     node: true
