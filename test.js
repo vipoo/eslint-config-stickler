@@ -1,18 +1,19 @@
 module.exports = {
   globals: {
-    describe: false,
-    before: false,
-    after: false,
-    it: false,
-    module: false,
-    afterEach: false,
-    beforeEach: false
+    context: 'readonly',
+    describe: 'readonly',
+    before: 'readonly',
+    after: 'readonly',
+    it: 'readonly',
+    module: 'readonly',
+    afterEach: 'readonly',
+    beforeEach: 'readonly'
   },
   rules: {
     'node/no-missing-import': ['error', {
-      'allowModules': [],
-      'resolvePaths': ['node_modules', './', './tests'],
-      'tryExtensions': ['.js']
+      allowModules: [],
+      resolvePaths: ['node_modules', './', './tests'],
+      tryExtensions: ['.js']
     }]
   }
 }

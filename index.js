@@ -1,14 +1,15 @@
 module.exports = {
   globals: {
-    console: false,
-    Promise: false,
-    process: false,
-    __dirname: false,
-    __filename: false,
-    setTimeout: false,
-    Symbol: false,
-    Set: false,
-    Map: false
+    console: 'readonly',
+    Promise: 'readonly',
+    process: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    setTimeout: 'readonly',
+    Symbol: 'readonly',
+    Set: 'readonly',
+    Map: 'readonly',
+    Proxy: 'readonly'
   },
   parserOptions: {
     sourceType: 'module',
@@ -20,12 +21,14 @@ module.exports = {
   },
   parser: 'babel-eslint',
   rules: {
+    'operator-linebreak': ['error', 'after', { overrides: { '|>': 'before' } }],
+    'arrow-spacing':  [ 'error', { before: true, after: true }],
     'node/no-missing-import': ['error', {
-      'allowModules': [],
-      'resolvePaths': ['node_modules', './src', './tests'],
-      'tryExtensions': ['.js']
+      allowModules: [],
+      resolvePaths: ['node_modules', './src', './tests'],
+      tryExtensions: ['.js']
     }],
-    'no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
+    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'import/no-commonjs': ['error'],
     'strict': ['error', 'global'],
     'quotes': [2, 'single', 'avoid-escape'],
@@ -47,33 +50,33 @@ module.exports = {
     'padded-blocks': 0,
     'spaced-comment': 0,
     'one-var': 0,
-    'brace-style': 0,
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'space-before-function-paren': 0,
     'generator-star-spacing': 0,
     'new-cap': 0,
     'computed-property-spacing': 0,
     'no-console': ['error'],
-    'no-multiple-empty-lines': ['error', { 'max': 1, 'maxEOF': 1 }],
-    'key-spacing': ['error', { 'beforeColon': false }],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
+    'key-spacing': ['error', { beforeColon: false }],
     'space-before-blocks': 'error',
     'indent': ['error', 2],
     'filenames/match-regex': [2, '^[a-z0-9_\\.]+$', false],
     'no-only-tests/no-only-tests': 2,
     'complexity': ['error', 4],
-    'space-infix-ops': ['error', {'int32Hint': true}],
+    'space-infix-ops': ['error', {int32Hint: true}],
     'space-unary-ops': 'error',
     'block-spacing': ['error', 'always'],
     'no-whitespace-before-property': 'error',
     'space-before-function-paren': ['error', {
-      'anonymous': 'never',
-      'named': 'never',
-      'asyncArrow': 'always'
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always'
     }],
     'quote-props': ['error', 'as-needed']
   },
   env: {
     node: true
   },
-  'extends': ['eslint:recommended', 'google'],
-  'plugins': ['eslint-plugin-node', 'import', 'filenames', 'no-only-tests']
+  extends: ['eslint:recommended', 'google'],
+  plugins: ['eslint-plugin-node', 'import', 'filenames', 'no-only-tests']
 }
